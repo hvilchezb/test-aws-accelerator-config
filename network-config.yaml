@@ -783,7 +783,7 @@ vpcs:
         routeTableAssociations:
           - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw-rt-firewall"
         routeTablePropagations: []
-        #subnets:
+        subnets: []
           #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
           #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-b"
     useCentralEndpoints: true
