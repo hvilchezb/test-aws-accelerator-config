@@ -41,7 +41,7 @@ workloadAccounts:
     description: The Network account
     email: roberto1286+network@gmail.com
     organizationalUnit: Infrastructure
-  #- name: Perimeter
-  #  description: The Perimeter account
-  #  email: <perimeter>@example.com  <----- UPDATE EMAIL ADDRESS
-  #  organizationalUnit: Infrastructure
+  - name: Perimeter
+    description: The Perimeter account
+    email: roberto1286+perimeter@gmail.com
+    organizationalUnit: Infrastructure
