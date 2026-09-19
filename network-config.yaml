@@ -259,53 +259,53 @@ centralNetworkServices:
   #         accounts: []
 
   # Amazon Route 53 Resolver
-  route53Resolver:
-    # Route 53 Resolver Query Logging
-    queryLogs:
-      name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
-      destinations:
-        - cloud-watch-logs # Using Log Streaming, CloudWatch Logs are stored in centralized S3
-      shareTargets:
-        accounts:
-          - SharedServices
-          - Perimeter
-        organizationalUnits:
-          - Infrastructure
-          - Workloads/Dev
-          - Workloads/Test
-          - Workloads/Prod
-    # Route 53 Resolver DNS Firewall
-    firewallRuleGroups:
-      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-dns-firewall"
-        regions:
-          - "{{ HomeRegion }}"
-        rules:
-          - name: block-aggregate-threats
-            action: BLOCK
-            blockResponse: NODATA
-            managedDomainList: AWSManagedDomainsAggregateThreatList
-            priority: 100
-          - name: block-malware-domains
-            action: BLOCK
-            blockResponse: NODATA
-            managedDomainList: AWSManagedDomainsMalwareDomainList
-            priority: 200
-          - name: block-botnet-cnc
-            action: BLOCK
-            blockResponse: NODATA
-            managedDomainList: AWSManagedDomainsBotnetCommandandControl
-            priority: 300
-        shareTargets:
-          accounts:
-            - SharedServices
-            - Perimeter
-          organizationalUnits:
-            - Workloads/Dev
-            - Workloads/Test
-            - Workloads/Prod
-        tags:
-          - key: Accelerator
-            value: "{{ AcceleratorPrefix }}"
+  # route53Resolver:
+  #   # Route 53 Resolver Query Logging
+  #   queryLogs:
+  #     name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+  #     destinations:
+  #       - cloud-watch-logs # Using Log Streaming, CloudWatch Logs are stored in centralized S3
+  #     shareTargets:
+  #       accounts:
+  #         - SharedServices
+  #         - Perimeter
+  #       organizationalUnits:
+  #         - Infrastructure
+  #         - Workloads/Dev
+  #         - Workloads/Test
+  #         - Workloads/Prod
+  #   # Route 53 Resolver DNS Firewall
+  #   firewallRuleGroups:
+  #     - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-dns-firewall"
+  #       regions:
+  #         - "{{ HomeRegion }}"
+  #       rules:
+  #         - name: block-aggregate-threats
+  #           action: BLOCK
+  #           blockResponse: NODATA
+  #           managedDomainList: AWSManagedDomainsAggregateThreatList
+  #           priority: 100
+  #         - name: block-malware-domains
+  #           action: BLOCK
+  #           blockResponse: NODATA
+  #           managedDomainList: AWSManagedDomainsMalwareDomainList
+  #           priority: 200
+  #         - name: block-botnet-cnc
+  #           action: BLOCK
+  #           blockResponse: NODATA
+  #           managedDomainList: AWSManagedDomainsBotnetCommandandControl
+  #           priority: 300
+  #       shareTargets:
+  #         accounts:
+  #           - SharedServices
+  #           - Perimeter
+  #         organizationalUnits:
+  #           - Workloads/Dev
+  #           - Workloads/Test
+  #           - Workloads/Prod
+  #       tags:
+  #         - key: Accelerator
+  #           value: "{{ AcceleratorPrefix }}"
 
 endpointPolicies:
   # Endpoint policies
