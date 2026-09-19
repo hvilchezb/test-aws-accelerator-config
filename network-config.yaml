@@ -716,20 +716,20 @@ vpcs:
     # queryLogs:
     #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
-      #   routes:
-      #     - name: TgwRoute
-      #       destination: 0.0.0.0/0
-      #       type: networkFirewall
-      #       target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
-      #       targetAvailabilityZone: a
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-b"
-      #   routes:
-      #     - name: TgwRoute
-      #       destination: 0.0.0.0/0
-      #       type: networkFirewall
-      #       target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
-      #       targetAvailabilityZone: b
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
+        routes:
+          - name: TgwRoute
+            destination: 0.0.0.0/0
+            type: networkFirewall
+            target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
+            targetAvailabilityZone: a
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-b"
+        routes:
+          - name: TgwRoute
+            destination: 0.0.0.0/0
+            type: networkFirewall
+            target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
+            targetAvailabilityZone: b
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
         routes:
           - name: TgwRoute
@@ -743,18 +743,18 @@ vpcs:
             type: transitGateway
             target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw"
     subnets:
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-a"
-      #   availabilityZone: a
-      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
-      #   ipamAllocation:
-      #     ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-      #     netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-b"
-      #   availabilityZone: b
-      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-b"
-      #   ipamAllocation:
-      #     ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-      #     netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-a"
+        availabilityZone: a
+        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
+        ipamAllocation:
+          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
+          netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-b"
+        availabilityZone: b
+        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-b"
+        ipamAllocation:
+          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
+          netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
         availabilityZone: a
         routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
