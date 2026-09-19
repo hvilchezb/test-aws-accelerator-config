@@ -32,12 +32,12 @@ transitGateways:
             attachment:
               vpcName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-egress"
               account: Perimeter
-      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw-rt-spoke"
-        routes:
-          - destinationCidrBlock: 0.0.0.0/0
-            attachment:
-              vpcName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection"
-              account: Network
+      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw-rt-spoke"
+      #   routes:
+      #     - destinationCidrBlock: 0.0.0.0/0
+      #       attachment:
+      #         vpcName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection"
+      #         account: Network
     transitGatewayFlowLogs:
       maxAggregationInterval: 60
       destinations:
