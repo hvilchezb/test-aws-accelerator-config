@@ -773,19 +773,19 @@ vpcs:
       #   tags:
       #     - key: SubnetType
       #       value: "{{ AcceleratorPrefix }}-Tgw"
-    transitGatewayAttachments:
-      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection"
-        transitGateway:
-          name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw"
-          account: Network
-        options:
-          applianceModeSupport: enable # This is required to ensure symmetric routing and maintain stateful inspection capabilities
-        routeTableAssociations:
-          - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw-rt-firewall"
-        routeTablePropagations: []
-        subnets: []
-          #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
-          #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-b"
+    # transitGatewayAttachments:
+    #   - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection"
+    #     transitGateway:
+    #       name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw"
+    #       account: Network
+    #     options:
+    #       applianceModeSupport: enable # This is required to ensure symmetric routing and maintain stateful inspection capabilities
+    #     routeTableAssociations:
+    #       - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw-rt-firewall"
+    #     routeTablePropagations: []
+    #     subnets: []
+    #       #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
+    #       #- "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-b"
     useCentralEndpoints: true
     # dnsFirewallRuleGroups:
     #   - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-dns-firewall"
