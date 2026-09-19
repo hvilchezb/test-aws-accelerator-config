@@ -29,7 +29,7 @@ cloudwatchLogRetentionInDays: 365
 cdkOptions:
   centralizeBuckets: true
   useManagementAccessRole: true
-terminationProtection: true
+terminationProtection: false
 
 # AWS CloudFormation Stack Policy Protection
 stackPolicy:
