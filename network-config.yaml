@@ -743,36 +743,36 @@ vpcs:
             type: transitGateway
             target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-tgw"
     subnets:
-      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-a"
-        availabilityZone: a
-        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
-        ipamAllocation:
-          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-          netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
-      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-b"
-        availabilityZone: b
-        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-b"
-        ipamAllocation:
-          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-          netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
+      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-a"
       #   availabilityZone: a
-      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
+      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
       #   ipamAllocation:
       #     ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-      #     netmaskLength: 28
-      #   tags:
-      #     - key: SubnetType
-      #       value: "{{ AcceleratorPrefix }}-Tgw"
-      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-b"
+      #     netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
+      # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-fw-b"
       #   availabilityZone: b
-      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-b"
+      #   routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-b"
       #   ipamAllocation:
       #     ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
-      #     netmaskLength: 28
-      #   tags:
-      #     - key: SubnetType
-      #       value: "{{ AcceleratorPrefix }}-Tgw"
+      #     netmaskLength: {{ HomeRegionInspectionFwSubnetMaskLength }}
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-a"
+        availabilityZone: a
+        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
+        ipamAllocation:
+          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
+          netmaskLength: 28
+        tags:
+          - key: SubnetType
+            value: "{{ AcceleratorPrefix }}-Tgw"
+      - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-tgw-b"
+        availabilityZone: b
+        routeTable: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-b"
+        ipamAllocation:
+          ipamPoolName: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ipam-inspection-pool"
+          netmaskLength: 28
+        tags:
+          - key: SubnetType
+            value: "{{ AcceleratorPrefix }}-Tgw"
     transitGatewayAttachments:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection"
         transitGateway:
