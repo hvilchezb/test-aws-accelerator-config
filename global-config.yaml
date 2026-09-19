@@ -68,14 +68,14 @@ enableOptInRegions: false
 # AWS Control Tower Configurations
 controlTower:
   enable: false # Enables Control Tower
-  landingZone:
-    version: "4.0" # Specifies the Control Tower landing zone version
-    logging:
-      loggingBucketRetentionDays: 365 # Retains general logs for Amazon S3 bucket in Control Tower
-      accessLoggingBucketRetentionDays: 365 # Retains access logs for Amazon S3 bucket in Control Tower
-      organizationTrail: true # Enables organization-wide AWS CloudTrail
-    security:
-      enableIdentityCenterAccess: true # Enables AWS IAM Identity Center for centralized access management
+  # landingZone:
+  #   version: "4.0" # Specifies the Control Tower landing zone version
+  #   logging:
+  #     loggingBucketRetentionDays: 365 # Retains general logs for Amazon S3 bucket in Control Tower
+  #     accessLoggingBucketRetentionDays: 365 # Retains access logs for Amazon S3 bucket in Control Tower
+  #     organizationTrail: true # Enables organization-wide AWS CloudTrail
+  #   security:
+  #     enableIdentityCenterAccess: true # Enables AWS IAM Identity Center for centralized access management
   # Control Tower Controls Configurations
   # See the AWS documentation for the identifier list:  https://docs.aws.amazon.com/controltower/latest/controlreference/all-global-identifiers.html
   controls:

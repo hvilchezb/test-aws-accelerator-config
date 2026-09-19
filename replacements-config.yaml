@@ -38,9 +38,9 @@ globalReplacements:
     value: roberto1286@gmail.com
 
   # Networking
-  #- key: TransitGatewayASN
-  #  type: Number
-  #  value: 64512 # <---- Update to your specific ASN
+  - key: TransitGatewayASN
+    type: Number
+    value: 64512 # <---- Update to your specific ASN
 
   ##  IPAM CONFIGURATION
 
