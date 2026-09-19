@@ -336,8 +336,8 @@ vpcs:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-endpoints-rt-a"
         routes:
@@ -463,8 +463,8 @@ vpcs:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-ingress-rt-fw-a"
         routes: []
@@ -584,8 +584,8 @@ vpcs:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-egress-rt-fw-a"
         routes: []
@@ -713,8 +713,8 @@ vpcs:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       # - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
       #   routes:
@@ -809,8 +809,8 @@ vpcs:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-sharedservices-rt-web-a"
         routes:
@@ -950,8 +950,8 @@ vpcTemplates:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-dev-rt-app-a"
         routes:
@@ -1073,8 +1073,8 @@ vpcTemplates:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-test-rt-app-a"
         routes:
@@ -1196,8 +1196,8 @@ vpcTemplates:
     enableDnsHostnames: true
     enableDnsSupport: true
     instanceTenancy: default
-    queryLogs:
-      - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
+    # queryLogs:
+    #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-prod-rt-app-a"
         routes:
