@@ -717,19 +717,19 @@ vpcs:
     #   - "{{ AcceleratorPrefix }}-{{ HomeRegion }}-query-logs"
     routeTables:
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-a"
-        routes:
-          - name: TgwRoute
-            destination: 0.0.0.0/0
-            type: networkFirewall
-            target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
-            targetAvailabilityZone: a
+        routes: []
+          # - name: TgwRoute
+          #   destination: 0.0.0.0/0
+          #   type: networkFirewall
+          #   target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
+          #   targetAvailabilityZone: a
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-tgw-b"
-        routes:
-          - name: TgwRoute
-            destination: 0.0.0.0/0
-            type: networkFirewall
-            target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
-            targetAvailabilityZone: b
+        routes: []
+          # - name: TgwRoute
+          #   destination: 0.0.0.0/0
+          #   type: networkFirewall
+          #   target: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-nfw"
+          #   targetAvailabilityZone: b
       - name: "{{ AcceleratorPrefix }}-{{ HomeRegion }}-inspection-rt-fw-a"
         routes:
           - name: TgwRoute
